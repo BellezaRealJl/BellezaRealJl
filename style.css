@@ -179,3 +179,32 @@ footer {
   padding: 20px 0;
   text-align: center;
 }
+nav {
+  position: relative;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background: var(--color-primario);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.menu-toggle {
+  background: var(--color-secundario);
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.section {
+  opacity: 0;
+  animation: fadeUp 1s ease-out forwards;
+}
