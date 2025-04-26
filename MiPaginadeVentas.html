@@ -1,28 +1,99 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Belleza Real JL</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Belleza Real JL</h1>
-  <h2>Productos y Servicios de Belleza</h2>
+  <header>
+    <div class="logo">
+      <h1>Belleza Real JL</h1>
+      <p>Productos y Servicios de Belleza</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#cliente">Servicio al Cliente</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <h3>Kit Facial Completo</h3>
-  <p>Incluye limpieza, hidratación y crema natural. ¡Envío disponible!</p>
+  <section id="productos">
+    <h2>Productos Destacados</h2>
+    <div class="productos-lista">
+      <div class="producto">
+        <h3>Kit Facial Completo</h3>
+        <p>Incluye limpieza, hidratación y crema natural. ¡Envío disponible!</p>
+        <ul>
+          <li>Clientes en EE. UU.: <strong>$30 USD</strong></li>
+          <li>Clientes en Colombia: <strong>$120.000 COP</strong></li>
+        </ul>
+        <a href="https://link.mercadopago.com.co/bellezarealjl1" target="_blank" class="boton">Pagar con MercadoPago</a>
+      </div>
+      <div class="producto">
+        <h3>Crema Hidratante Antiarrugas</h3>
+        <p>Con ingredientes naturales para una piel suave y radiante.</p>
+        <ul>
+          <li>Clientes en EE. UU.: <strong>$25 USD</strong></li>
+          <li>Clientes en Colombia: <strong>$95.000 COP</strong></li>
+        </ul>
+        <a href="https://link.mercadopago.com.co/bellezarealjl1" target="_blank" class="boton">Pagar con MercadoPago</a>
+      </div>
+    </div>
+  </section>
 
-  <h3>Precio:</h3>
-  <ul>
-    <li>Clientes en EE. UU.: <strong>$30 USD</strong></li>
-    <li>Clientes en Colombia: <strong>$120.000 COP</strong></li>
-  </ul>
+  <section id="servicios">
+    <h2>Servicios</h2>
+    <div class="servicios-lista">
+      <div class="servicio">
+        <h3>Tratamiento Facial</h3>
+        <p>Revitaliza tu piel con nuestros tratamientos faciales personalizados.</p>
+      </div>
+      <div class="servicio">
+        <h3>Masajes Relajantes</h3>
+        <p>Masajes terapéuticos para reducir el estrés y mejorar tu bienestar.</p>
+      </div>
+      <div class="servicio">
+        <h3>Manicura y Pedicura</h3>
+        <p>Cuida tus manos y pies con nuestros servicios profesionales.</p>
+      </div>
+    </div>
+  </section>
 
-  <h2>Elige tu método de pago:</h2>
+  <section id="cliente">
+    <h2>Servicio al Cliente</h2>
+    <p>Para consultas, dudas o información sobre nuestros productos y servicios, no dudes en contactarnos:</p>
+    <ul>
+      <li>Teléfono: +57 123 456 789</li>
+      <li>Email: contacto@bellezarealjl.com</li>
+      <li>WhatsApp: <a href="https://wa.me/57123456789" target="_blank">+57 123 456 789</a></li>
+    </ul>
+  </section>
 
-  <!-- Botón de pago con MercadoPago -->
-  <a href="https://link.mercadopago.com.co/bellezarealjl1" target="_blank">
-    <button type="button">Pagar con MercadoPago</button>
-  </a>
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Si deseas más información, por favor completa el siguiente formulario:</p>
+    <form action="#" method="POST">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
 
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" required></textarea>
+
+      <button type="submit" class="boton">Enviar mensaje</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Belleza Real JL - Todos los derechos reservados</p>
+  </footer>
 </body>
 </html>
