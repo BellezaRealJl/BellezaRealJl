@@ -1,4 +1,14 @@
-/* Estilos Generales */
+/* Variables de colores */
+:root {
+  --color-fondo: #fdf3f8; /* Rosado suave */
+  --color-texto: #333;
+  --color-primario: #e91e63; /* Rosado fuerte */
+  --color-secundario: #ffc107; /* Dorado */
+  --color-botones: #ff4081; /* Tono intermedio */
+  --color-hover: #d81b60;
+}
+
+/* Estilos generales */
 * {
   margin: 0;
   padding: 0;
@@ -7,13 +17,13 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
-  color: #333;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
   line-height: 1.6;
 }
 
 h1, h2, h3 {
-  color: #5f5f5f;
+  color: var(--color-primario);
 }
 
 a {
@@ -27,12 +37,9 @@ ul {
 
 /* Header */
 header {
-  background-color: #2d2d2d;
+  background: linear-gradient(90deg, var(--color-primario), var(--color-secundario));
   color: white;
   padding: 10px 0;
-}
-
-header .logo {
   text-align: center;
 }
 
@@ -49,7 +56,7 @@ header nav a {
 }
 
 header nav a:hover {
-  color: #f4b400;
+  color: var(--color-hover);
 }
 
 /* Productos */
@@ -69,10 +76,16 @@ header nav a:hover {
   padding: 20px;
   border-radius: 8px;
   width: 250px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+#productos .producto:hover {
+  transform: scale(1.05);
 }
 
 #productos .producto h3 {
-  color: #007bff;
+  color: var(--color-primario);
 }
 
 .boton {
@@ -80,14 +93,14 @@ header nav a:hover {
   margin-top: 10px;
   padding: 10px;
   text-align: center;
-  background-color: #007bff;
+  background-color: var(--color-botones);
   color: white;
   border-radius: 5px;
   transition: background-color 0.3s;
 }
 
 .boton:hover {
-  background-color: #0056b3;
+  background-color: var(--color-hover);
 }
 
 /* Servicios */
@@ -108,6 +121,12 @@ header nav a:hover {
   border-radius: 8px;
   width: 250px;
   text-align: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+#servicios .servicio:hover {
+  transform: scale(1.05);
 }
 
 /* Servicio al Cliente */
@@ -142,7 +161,7 @@ header nav a:hover {
 
 #contacto button {
   padding: 10px;
-  background-color: #28a745;
+  background-color: var(--color-secundario);
   color: white;
   border: none;
   border-radius: 5px;
@@ -150,7 +169,7 @@ header nav a:hover {
 }
 
 #contacto button:hover {
-  background-color: #218838;
+  background-color: #d39e00;
 }
 
 /* Footer */
