@@ -1,10 +1,10 @@
 /* Variables de colores */
 :root {
-  --color-fondo: #fdf3f8; /* Rosado suave */
+  --color-fondo: #fdf3f8;
   --color-texto: #333;
-  --color-primario: #e91e63; /* Rosado fuerte */
-  --color-secundario: #ffc107; /* Dorado */
-  --color-botones: #ff4081; /* Tono intermedio */
+  --color-primario: #e91e63;
+  --color-secundario: #ffc107;
+  --color-botones: #ff4081;
   --color-hover: #d81b60;
 }
 
@@ -16,7 +16,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   background-color: var(--color-fondo);
   color: var(--color-texto);
   line-height: 1.6;
@@ -39,146 +39,10 @@ ul {
 header {
   background: linear-gradient(90deg, var(--color-primario), var(--color-secundario));
   color: white;
-  padding: 10px 0;
-  text-align: center;
-}
-
-header nav ul {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding-top: 10px;
-}
-
-header nav a {
-  color: white;
-  font-weight: bold;
-}
-
-header nav a:hover {
-  color: var(--color-hover);
-}
-
-/* Productos */
-#productos {
-  padding: 40px 0;
-  background-color: #fff;
-}
-
-#productos .productos-lista {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-}
-
-#productos .producto {
-  background-color: #f1f1f1;
   padding: 20px;
-  border-radius: 8px;
-  width: 250px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
-}
-
-#productos .producto:hover {
-  transform: scale(1.05);
-}
-
-#productos .producto h3 {
-  color: var(--color-primario);
-}
-
-.boton {
-  display: block;
-  margin-top: 10px;
-  padding: 10px;
-  text-align: center;
-  background-color: var(--color-botones);
-  color: white;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.boton:hover {
-  background-color: var(--color-hover);
-}
-
-/* Servicios */
-#servicios {
-  padding: 40px 0;
-  background-color: #f9f9f9;
-}
-
-#servicios .servicios-lista {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-}
-
-#servicios .servicio {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  width: 250px;
-  text-align: center;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
-}
-
-#servicios .servicio:hover {
-  transform: scale(1.05);
-}
-
-/* Servicio al Cliente */
-#cliente {
-  padding: 40px 0;
   text-align: center;
 }
 
-#cliente ul {
-  padding: 20px;
-}
-
-/* Contacto */
-#contacto {
-  padding: 40px 0;
-  background-color: #fff;
-}
-
-#contacto form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-#contacto input, #contacto textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-#contacto button {
-  padding: 10px;
-  background-color: var(--color-secundario);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#contacto button:hover {
-  background-color: #d39e00;
-}
-
-/* Footer */
-footer {
-  background-color: #2d2d2d;
-  color: white;
-  padding: 20px 0;
-  text-align: center;
-}
 nav {
   position: relative;
 }
@@ -186,11 +50,15 @@ nav {
 .menu {
   display: none;
   position: absolute;
-  top: 40px;
+  top: 50px;
   left: 0;
   background: var(--color-primario);
   padding: 10px;
   border-radius: 5px;
+}
+
+.menu.show {
+  display: block;
 }
 
 .menu-toggle {
@@ -199,12 +67,61 @@ nav {
   border: none;
   cursor: pointer;
 }
+
+/* Animaciones */
 @keyframes fadeUp {
   0% { opacity: 0; transform: translateY(20px); }
   100% { opacity: 1; transform: translateY(0); }
 }
 
 .section {
-  opacity: 0;
+  opacity: 1;
   animation: fadeUp 1s ease-out forwards;
+}
+
+/* Botón con efecto */
+.boton {
+  display: inline-block;
+  background-color: var(--color-botones);
+  padding: 12px 20px;
+  border-radius: 6px;
+  color: white;
+  text-transform: uppercase;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.boton:hover {
+  background-color: var(--color-hover);
+  transform: scale(1.05);
+}
+
+/* Productos */
+#productos .producto {
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+#productos .producto:hover {
+  transform: scale(1.05);
+}
+
+/* Imágenes con efecto */
+.img-container img {
+  transition: transform 0.3s ease-in-out, filter 0.3s;
+}
+
+.img-container:hover img {
+  transform: scale(1.1);
+  filter: brightness(80%);
+}
+
+/* Footer */
+footer {
+  background-color: #2d2d2d;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
 }
